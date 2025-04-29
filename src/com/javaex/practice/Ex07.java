@@ -20,16 +20,16 @@ public class Ex07 {
 
 		System.out.print("금액: ");
 		int money = sc.nextInt();
-		int count = 0;
 		
-		int i;
-		for(i=0; i<wonArr.length; i++) {
-			count = money / wonArr[i];
-			System.out.println(count);
+		for(int i=0; i<wonArr.length; i++) {
+			int won = wonArr[i]; // 돈 현황 표시
+			int count = money / won; // 돈 수량 표시
+			money = money % won; // 잔액 누적적용 표시
+			
+			System.out.println(won + "원: " + count + "개");
 		}
 		
-		
-		
 		sc.close();
+		}
+		
 	}
-}
